@@ -117,7 +117,7 @@ function draw() {
      
       text("Apex Programming has an impressive bank of programmers to draw from,\nwith talents ranging from incredible game mechanics to eye-shattering graphics.",0,-180);
     
-      text("Founder: KingKhanOO7\nCo-Founder-πceratops\nGraphics Designers - Captain, Chester Banks\nLendary Programmer - Infiltration\nLead Programmer - Thomas Li\nProgrammer - Matthias, Grandzam\nIntern - Code Lord",0,100);
+      text("Founder: KingKhanOO7\nCo-Founder-πceratops\nGraphics Designers - Captain, Chester Banks\nGameplay - Matthias, Grandzam\nIntern - Code Lord",0,100);
   break;
   }
   for (var i in buttons[state]) {
