@@ -9,6 +9,7 @@ function setup() {
   state = "menu";
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
+  
   sz = min(width, height)/1050;
     buttons = {
     "menu": [new Button(-75, 340, "About", "about"), new Button(-250, 340, "Games", "games"), new Button(100, 340, "Members", "members")],
@@ -17,21 +18,19 @@ function setup() {
     "members": [new Button(-(width/2 / sz) + 100, (height/2 / sz) - 100, "Back", "menu")],
   }
 }
-function ap(x,y,size) {
+
+function a(x,y,size,r) {
     push();
     translate(x,y);
     scale(size);
-    
-    noStroke();
-    fill(0, 153, 255);
-    rectMode(CENTER);
-    rect(0,0,200,200,64);
-    stroke(255, 255, 255);
-    strokeWeight(5);
-    line(-55,50,0,-50);
-    line(0,-50,0,50);
-    noFill();
-    arc(11,-23,75,55,-90,90);
+    rotate(r);
+    strokeWeight(12);
+    stroke(124, 153, 129);
+    line(-25,0,0,-45);
+    stroke(150,182,155);
+    line(25,0,0,-45);
+    stroke(173, 201, 177);
+    line(-25,0,25,0);
     
     
     pop();
@@ -40,6 +39,7 @@ function ap(x,y,size) {
 function draw() {
     noStroke();
   background(255,255,255);
+
 
   cursor(ARROW);
   
@@ -51,9 +51,9 @@ function draw() {
   switch(state) {
   
   case "menu":
-      background(255);
-      ap(0,0,3);
-      fill(255,255,255,200);
+      
+      a(0,150,9,0);
+      fill(255,255,255,150);
       rect(-width,-height,width*200,height*200);
       textFont("Dosis");
       textSize(100);
@@ -61,23 +61,23 @@ function draw() {
       noStroke();
       fill(0,0,0,20);
       text("A P E X\nP R O G R A M M I N G",0,-295);
-      fill(0,153,255);
+      fill(149, 179, 153);
       text("A P E X\nP R O G R A M M I N G",0,-300);
       textSize(20);
       text("Website designed by Captain Productions",-450,500);
 
   break;
   case "games":
-      background(255);
-      ap(0,0,3);
-      fill(255,255,255,200);
+      
+      a(0,150,9,0);
+      fill(255,255,255,150);
       rect(-width,-height,width*200,height*200);
       textFont("Dosis");
       textSize(100);
       noStroke();
       fill(0,0,0,20);
       text("O U R    G A M E S",0,-295);
-      fill(0,153,255);
+      fill(149, 179, 153);
       text("O U R    G A M E S",0,-300);
       
       textSize(50);
@@ -85,39 +85,39 @@ function draw() {
       
   break;
   case "about":
-      background(255);
-      ap(0,0,3);
-      fill(255,255,255,200);
+      
+      a(0,150,9,0);
+      fill(255,255,255,150);
       rect(-width,-height,width*200,height*200);
       textFont("Dosis");
       textSize(100);
       noStroke();
       fill(0,0,0,20);
       text("A B O U T    U S",0,-295);
-      fill(0,153,255);
+      fill(149, 179, 153);
       text("A B O U T    U S",0,-300);
       
       textSize(40);
       text("Apex Programming is a small but talented group of programmers,\n founded on June 7th 2O16. 2 programmers,\n KingKhanOO7 and πceratops came together to start this programming group.\n Unlike many other programming clubs, we try to keep\n our number small and stay productive.",0,0);   
   break;
   case "members":
-      background(255);
-      ap(0,0,3);
-      fill(255,255,255,200);
+      
+      a(0,150,9,0);
+      fill(255,255,255,150);
       rect(-width,-height,width*200,height*200);
       textFont("Dosis");
       textSize(100);
       noStroke();
       fill(0,0,0,20);
       text("M E M B E R S",0,-295);
-      fill(0,153,255);
+      fill(149, 179, 153);
       text("M E M B E R S",0,-300);
       
       textSize(40);  
      
       text("Apex Programming has an impressive bank of programmers to draw from,\nwith talents ranging from incredible game mechanics to eye-shattering graphics.",0,-180);
     
-      text("Founder: KingKhanOO7\nCo-Founder-πceratops\nGraphics Designers - Captain, Chester Banks\nGameplay - Matthias, Grandzam\nIntern - Code Lord",0,100);
+      text("Founder: KingKhanOO7\nCo-Founder-πceratops\nGraphics Designers - Captain, Chester Banks\nLendary Programmer - Infiltration\nLead Programmer - Thomas Li\nProgrammer - Matthias, Grandzam\nIntern - Code Lord",0,100);
   break;
   }
   for (var i in buttons[state]) {
@@ -146,7 +146,7 @@ var Button = function(x,y,txt,dest) {
         fill(this.gray);
         rect(this.x,this.y,150,75);
         noStroke();
-        fill(0, 153, 255);
+        fill(149, 179, 153);
         textSize(28);
         textFont("Dosis");
         textAlign(CENTER,CENTER);
